@@ -1,26 +1,20 @@
-
-/* const strongEl = document.getElementById("bold-text")
-console.log(strongEl);
-
-const portfolioEl = document.getElementById("portfolio")
-console.log(portfolioEl);
-
-const sectionEl = document.querySelector(".lorem")
-sectionEl.style.backgroundColor = "red"
-console.log(sectionEl); */
-
-
-
-        
-
+ 
         const buttonEl = document.querySelector(".btn")
-        buttonEl.addEventListener("click", function(){
+        buttonEl.addEventListener("click", function (){
+
            const elemento = document.querySelector(".lampOff")
-            elemento.src = "./img/yellow_lamp.png"
+           
+            if (elemento.src.includes("./img/white_lamp.png") > -1 ){
+                elemento.src = "./img/yellow_lamp.png";
+                buttonEl.innerText = "Spegni"
+            } else if (elemento.src.includes("./img/yellow_lamp.png") > -1){
+                elemento.src = "./img/white_lamp.png";
+                buttonEl.innerText = "Accendi"
+            }
             
         })
 
-      /*   const elemento = document.querySelector("img")
-        function Accendi (){
-            const elemento = document.getElementById("lampOff")
-        } */
+          
+
+    
+       
